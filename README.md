@@ -1,24 +1,27 @@
-# README
+# Rails 7 with React Frontend Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A brief guide to setting up a Ruby on Rails v7 project with React on Ubuntu 20.04.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+- Ruby on Rails v7: The latest version of Rails, offering improved JavaScript integration options.
+- Node.js: A JavaScript runtime necessary for managing JavaScript packages.
+- Yarn: A fast, reliable, and secure dependency management tool for JavaScript.
+- PostgreSQL: A robust, SQL-compliant database system, recommended for production-grade applications.
 
-* System dependencies
+## Set up
+Generate a new Rails project, specifying PostgreSQL for the database and esbuild for JavaScript processing, to lay the foundation for React integration:
 
-* Configuration
+## Prepare Database 
+rails db:create db:migrate
 
-* Database creation
+## Install React
+yarn add react react-dom
 
-* Database initialization
+## Craft React Components
+mkdir app/javascript/components
 
-* How to run the test suite
+## Configure Rails to Serve React
+root 'homepage#index'
+get '/*path', to: 'homepage#index'
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
