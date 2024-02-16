@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import Recipes from "../components/Recipes";
 import Recipe from "../components/Recipe"; // Ensure you import the Recipe component
+import NewRecipe from "../components/NewRecipe";
 
 const AppRoutes = () => (
   <Router>
@@ -10,6 +11,7 @@ const AppRoutes = () => (
       <Route path="/" element={<Home />} />
       <Route path="/recipes" element={<Recipes />} />
       <Route path="/recipe/:id" element={<Recipe />} />
+      <Route path="/recipe" element={<NewRecipe />} />
     </Routes>
   </Router>
 );
